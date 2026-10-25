@@ -9,3 +9,12 @@ body { margin:0; color:#17251f; background:var(--cream); font-family:'DM Sans',A
 .detail-copy { color:var(--ink); }.detail-copy .eyebrow { font:25px 'Patrick Hand',cursive; margin:0 0 7px; }.detail-copy h1 { font:60px/.9 'Patrick Hand',cursive; margin:0 0 18px; }.detail-copy .scientific { font-size:17px; margin-bottom:25px; }.detail-copy p { line-height:1.55; font-size:15px; }.facts { list-style:none; padding:0; margin:25px 0; border-top:1px solid #d5d9cd; }.facts li { padding:13px 0; border-bottom:1px solid #d5d9cd; font-size:14px; }.facts strong { margin-right:5px; }.adopt-button { display:inline-flex; align-items:center; gap:30px; color:#fff; background:var(--green); border-radius:24px; padding:13px 22px; text-decoration:none; }.adopt-button span { font-size:22px; }
 .back-link { display:inline-block; margin-top:16px; color:var(--green); text-decoration:none; font-size:14px; }
 @media (max-width:700px) { .tree-header { padding:10px 5%; }.tree-header img { width:220px; }.detail { grid-template-columns:1fr; margin:25px auto; gap:28px; padding:0 20px; }.detail-image { height:330px; }.detail-copy h1 { font-size:48px; } }
+.adoption-form-page { min-height:calc(100vh - 76px); display:grid; place-items:center; padding:40px 20px; }
+.adoption-form { width:min(100%, 500px); padding:38px; background:#fbfaf4; border:1px solid #d8d8ca; border-radius:24px; box-shadow:0 8px 22px #193b2d20; color:var(--ink); }
+.adoption-form .eyebrow { font:25px 'Patrick Hand',cursive; margin:0 0 7px; }
+.adoption-form h1 { font:52px/.95 'Patrick Hand',cursive; margin:0 0 12px; }
+.adoption-form > p:not(.eyebrow) { line-height:1.5; margin-bottom:25px; }
+.adoption-form label { display:block; margin:16px 0 7px; font-size:14px; font-weight:700; }
+.adoption-form input { width:100%; padding:13px 14px; border:1px solid #c9d0c4; border-radius:10px; background:#fff; color:var(--ink); font:inherit; }
+.adoption-form input:focus { outline:2px solid #9db8a4; border-color:var(--green); }
+.form-button { border:0; cursor:pointer; font:inherit; margin-top:25px; width:100%; }

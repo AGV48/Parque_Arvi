@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopta un árbol | Parque Arví</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="src/pages/tree-page.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header class="tree-header">
+        <a href="index.html"><img src="src/images/img_header.png" alt="Parque Arví"></a>
+        <a href="index.html#arboles">← Ver todos los árboles</a>
+    </header>
+
+    <main class="adoption-form-page">
+        <form class="adoption-form" id="adoption-form">
+            <p class="eyebrow">Tu aporte transforma el bosque</p>
+            <h1>Adopta un árbol</h1>
+            <p>Déjanos tus datos para registrar tu adopción en el Parque Arví.</p>
+
+            <label for="name">Nombre completo</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+
+            <label for="phone">Número de teléfono</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+
+            <button class="adopt-button form-button" type="submit">Confirmar adopción <span>→</span></button>
+            <a class="back-link" href="index.html#arboles">← Volver al catálogo</a>
+        </form>
+    </main>
+
+    <script>
+        document.getElementById('adoption-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            Swal.fire({
+                icon: 'success',
+                title: '¡Adopción realizada!',
+                text: 'El árbol se adoptó correctamente. Gracias por ayudar a proteger el Parque Arví.',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#214d3d'
+            }).then(function () {
+                event.target.reset();
+            });
+        });
+    </script>
+</body>
+</html>
